@@ -60,7 +60,7 @@ footer{text-align:center;color:var(--mut);font-size:13px;padding:30px 0 22px}
 </div><button class="btn" id="sb" style="margin-top:18px;width:100%">تأكيد التسجيل</button><div id="msg"></div></fieldset></form>
 <footer>© NextStep AI — Your Next Step. Smarter with AI.</footer></div>
 <script>
-const CONFIG={SUPABASE_URL:'https://fwlwkshvrxhctplfbdfq.supabase.co',SUPABASE_ANON_KEY:'PASTE_PUBLISHABLE_KEY_HERE',WORKSHOP:'english-2026-10',CLOSE_AT:'2026-10-15T11:30:00+03:00',START:'2026-10-15T12:00:00+03:00',END:'2026-10-15T13:00:00+03:00'};
+const CONFIG={SUPABASE_URL:'https://fwlwkshvrxhctplfbdfq.supabase.co',SUPABASE_ANON_KEY:'sb_publishable__YvkD5iBjpu6BCFnrjkeAQ_kWc0QPYk',WORKSHOP:'english-2026-10',CLOSE_AT:'2026-10-15T11:30:00+03:00',START:'2026-10-15T12:00:00+03:00',END:'2026-10-15T13:00:00+03:00'};
 const $=s=>document.querySelector(s),sb=window.supabase.createClient(CONFIG.SUPABASE_URL,CONFIG.SUPABASE_ANON_KEY),end=new Date(CONFIG.CLOSE_AT).getTime();
 function tick(){const d=end-Date.now();if(d<=0){$('#cd').innerHTML='<b style="font-size:20px">انتهى وقت التسجيل</b>';$('#cl').hidden=true;$('#fs').disabled=true;$('#closed').hidden=false;return}const p=n=>String(n).padStart(2,'0');$('#cd').innerHTML=`<div><b>${p(Math.floor(d/36e5))}</b>ساعة</div><div><b>${p(Math.floor(d/6e4)%60)}</b>دقيقة</div><div><b>${p(Math.floor(d/1e3)%60)}</b>ثانية</div>`}
 setInterval(tick,1000);tick();
